@@ -1,0 +1,128 @@
+As estruturas HTML (HyperText Markup Language) e CSS (Cascading Style Sheets) são fundamentais no desenvolvimento de páginas web. Elas trabalham juntas para criar o conteúdo, estrutura e estilo de sites e aplicações web. Vamos detalhar cada uma delas separadamente e como elas se integram.
+
+1. Estrutura HTML (HyperText Markup Language)
+O HTML é a linguagem de marcação usada para estruturar o conteúdo na web. Ele define a estrutura básica de uma página web, informando ao navegador como exibir textos, imagens, links, tabelas, formulários, vídeos, entre outros.
+
+Estrutura básica de um documento HTML:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Página</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS externo -->
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Seção Home</h2>
+            <p>Conteúdo da seção Home.</p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Informações sobre a empresa.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Formas de entrar em contato.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meu Site</p>
+    </footer>
+</body>
+</html>
+
+Explicação:
+<!DOCTYPE html>: Define o tipo de documento e que ele é um arquivo HTML5.
+<html lang="pt-br">: A tag <html> envolve todo o conteúdo da página e define o idioma (neste caso, português do Brasil).
+<head>: Contém informações sobre o documento (metadados), como título, link para o arquivo CSS e configurações de codificação.
+<body>: Contém o conteúdo visível da página.
+Estruturas como <header>, <nav>, <main> e <footer> são usadas para dividir o conteúdo em partes lógicas e acessíveis.
+Dentro do corpo do documento, as tags são usadas para estruturar o conteúdo:
+
+<h1>, <h2>, <h3>: Cabeçalhos de diferentes níveis.
+<p>: Parágrafos.
+<a>: Links.
+<ul>, <li>: Listas não ordenadas e itens de lista.
+2. Estrutura CSS (Cascading Style Sheets)
+O CSS é uma linguagem usada para definir o estilo e o layout dos elementos HTML. Ele permite controlar a aparência da página web, como cores, fontes,
+ espaçamentos, tamanhos, entre outros. O CSS pode ser embutido no próprio HTML, ou, como é mais comum, em arquivos externos.
+ Exemplo básico de um arquivo CSS:
+ 
+ /* Estilos gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Definir a fonte */
+    background-color: #f0f0f0; /* Cor de fundo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para links dentro da navegação */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para seções */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+Explicação:
+O CSS usa seletores para aplicar estilos aos elementos HTML. Por exemplo, body, header, nav a, section, e footer são seletores que aplicam estilos aos elementos correspondentes no HTML.
+font-family, background-color, padding, margin e color são propriedades usadas para definir o estilo dos elementos.
+O CSS também pode usar pseudo-classes, como a:hover, que define um estilo quando o usuário passa o mouse sobre um link.
+Como HTML e CSS trabalham juntos:
+HTML define o conteúdo estrutural da página.
+CSS define como esse conteúdo será exibido na tela.
+Exemplo de integração entre HTML e CSS:
+Se o HTML for salvo em um arquivo chamado index.html e o CSS em styles.css, o código HTML já contém uma referência ao arquivo CSS no <head> com a tag:
+
+    <link rel="stylesheet" href="styles.css">
+
+    Isso garante que o navegador aplique o estilo definido no arquivo CSS ao conteúdo HTML.
+
+Conceitos importantes no CSS:
+Seletores: Identificam os elementos que serão estilizados.
+elemento: Aplica a regra ao elemento HTML (ex: body, h1).
+.classe: Aplica a regra a elementos com a classe correspondente.
+#id: Aplica a regra a um único elemento com o ID especificado.
+Propriedades e valores: Cada estilo tem uma propriedade (ex: color, font-size) e um valor (ex: red, 16px).
+Modelo de caixa (Box Model): Cada elemento HTML é representado por uma caixa retangular, que pode incluir margens, bordas, preenchimento e o próprio conteúdo.
